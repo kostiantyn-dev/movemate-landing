@@ -76,6 +76,11 @@ select {
   border-radius: 8px;
   font-weight: 950;
   outline: 0;
+  transition: transform 180ms ease;
+}
+
+.brand:hover {
+  transform: translateY(-1px);
 }
 
 .brand:focus-visible,
@@ -90,6 +95,7 @@ select {
 }
 
 .brand-mark {
+  position: relative;
   display: grid;
   width: 50px;
   height: 50px;
@@ -103,12 +109,58 @@ select {
     inset 0 0 0 1px rgba(255, 255, 255, 0.12),
     inset 0 -12px 28px rgba(0, 0, 0, 0.24),
     0 14px 32px rgba(0, 0, 0, 0.26);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.brand-mark::before {
+  position: absolute;
+  inset: -1px;
+  z-index: 0;
+  border-radius: inherit;
+  background: conic-gradient(from 110deg, var(--teal-bright), var(--amber), var(--coral), var(--teal-bright));
+  content: "";
+  opacity: 0.2;
+}
+
+.brand-mark::after {
+  position: absolute;
+  inset: 1px;
+  z-index: 1;
+  border-radius: 7px;
+  background:
+    linear-gradient(115deg, transparent 0 34%, rgba(255, 255, 255, 0.34) 44%, transparent 54%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.06), transparent 58%);
+  content: "";
+  mix-blend-mode: screen;
+  opacity: 0.58;
+  transform: translateX(-42%);
+  transition: transform 420ms ease, opacity 220ms ease;
+}
+
+.brand:hover .brand-mark::after {
+  opacity: 0.8;
+  transform: translateX(44%);
 }
 
 .brand-mark svg {
+  position: relative;
+  z-index: 1;
   width: 39px;
   height: 39px;
   overflow: visible;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.28));
+  transition: transform 240ms ease;
+}
+
+.brand:hover .brand-mark svg {
+  transform: rotate(-3deg) scale(1.04);
+}
+
+.logo-halo {
+  fill: rgba(32, 199, 181, 0.14);
+  stroke: rgba(32, 199, 181, 0.28);
+  stroke-width: 1.2;
 }
 
 .logo-orbit,
@@ -155,6 +207,13 @@ select {
   stroke-width: 1.8;
 }
 
+.logo-shine {
+  fill: rgba(255, 255, 255, 0.38);
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-linejoin: round;
+  stroke-width: 0.8;
+}
+
 .logo-route,
 .logo-pin {
   fill: none;
@@ -170,6 +229,13 @@ select {
   stroke-width: 1.6;
 }
 
+.logo-spark {
+  fill: none;
+  stroke: var(--amber);
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
 .brand-word {
   display: grid;
   gap: 1px;
@@ -177,6 +243,9 @@ select {
 }
 
 .brand-word strong {
+  background: linear-gradient(135deg, #fff 18%, #f5b642 48%, #fff 82%);
+  background-clip: text;
+  color: transparent;
   font-size: 19px;
   letter-spacing: 0;
 }
@@ -1011,7 +1080,10 @@ select:focus {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  .brand,
+  .brand-mark::after,
+  .brand-mark svg {
     transition: none;
   }
 }

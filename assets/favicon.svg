@@ -7,8 +7,10 @@
   <path d="M16 23 32 14l16 9-16 10-16-10Z" fill="#f5b642" stroke="#ffd985" stroke-width="3" stroke-linejoin="round"/>
   <path d="M16 23v18l16 9V33L16 23Z" fill="#ff734d" stroke="#ff9d7f" stroke-width="3" stroke-linejoin="round"/>
   <path d="M48 23v18l-16 9V33l16-10Z" fill="#14a99d" stroke="#64e1d3" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M25 18.5 32 15l7 3.8-7 4-7-4.3Z" fill="#ffffff" fill-opacity=".38" stroke="#ffffff" stroke-opacity=".38" stroke-width="1"/>
   <path d="M32 14v19M16 23l16 10 16-10" fill="none" stroke="#0b1118" stroke-opacity=".42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M21 41c6-7 18-7 24 0" fill="none" stroke="#20c7b5" stroke-width="5" stroke-linecap="round"/>
   <path d="m45 41-5-5 5-5" fill="none" stroke="#20c7b5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="19" cy="42" r="4" fill="#20c7b5" stroke="#0b1118" stroke-width="2"/>
+  <path d="M51 12v6M48 15h6" fill="none" stroke="#f5b642" stroke-width="3" stroke-linecap="round"/>
 </svg>
