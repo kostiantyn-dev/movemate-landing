@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MoveMate - преміальні переїзди квартир, офісів і складів в Україні з пакуванням, вантажниками та прозорим кошторисом.">
+  <title>MoveMate - переїзд без хаосу</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MoveMate на початок">
+      <span class="brand-mark">M</span>
+      <span>MoveMate</span>
+    </a>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-label="Відкрити меню">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" data-nav>
+      <a href="#calculator">Кошторис</a>
+      <a href="#services">Послуги</a>
+      <a href="#cases">Кейси</a>
+      <a href="#contact">Заявка</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="assets/hero-moving-service.png" alt="">
+      </div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Переїзди квартир, офісів і бізнесів</p>
+          <h1>Переїзд без хаосу, з кошторисом до першої коробки</h1>
+          <p class="hero-text">MoveMate пакує, перевозить, збирає меблі й координує команду так, щоб переїзд не з'їв ваш робочий день.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#calculator">Порахувати переїзд</a>
+            <a class="button button-secondary" href="#services">Зібрати пакет</a>
+          </div>
+          <div class="hero-metrics" aria-label="Показники сервісу">
+            <span><strong>4.9/5</strong> оцінка клієнтів</span>
+            <span><strong>12 міст</strong> покриття</span>
+            <span><strong>24 год</strong> швидкий старт</span>
+          </div>
+        </div>
+
+        <aside class="quote-card" aria-label="Швидкий кошторис">
+          <div class="quote-card-top">
+            <span class="pulse"></span>
+            <p>Кошторис активний</p>
+          </div>
+          <strong data-hero-price>від 6 800 грн</strong>
+          <span data-hero-details>2-кімнатна квартира, пакування базове</span>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section problem">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">Чому це працює</p>
+          <h2>Ми прибираємо найболючіші частини переїзду</h2>
+        </div>
+        <p>Клієнт бачить план, команду, час і приблизну вартість ще до виїзду менеджера.</p>
+      </div>
+      <div class="problem-grid">
+        <article>
+          <span>01</span>
+          <h3>Пакування без втрат</h3>
+          <p>Коробки, маркування кімнат, захист техніки, скла і крихких речей.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Команда під задачу</h3>
+          <p>Вантажники, пакувальники, водій і координатор підбираються за обсягом.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Прозорий бюджет</h3>
+          <p>Кошторис оновлюється за параметрами переїзду, а не після факту.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section scenarios">
+      <div class="section-heading">
+        <p class="eyebrow">Сценарії</p>
+        <h2>Один сервіс для різних типів переїзду</h2>
+      </div>
+
+      <div class="scenario-layout">
+        <div class="scenario-tabs" role="tablist" aria-label="Тип переїзду">
+          <button class="scenario-tab is-active" type="button" data-scenario="apartment">Квартира</button>
+          <button class="scenario-tab" type="button" data-scenario="office">Офіс</button>
+          <button class="scenario-tab" type="button" data-scenario="commerce">Бізнес</button>
+        </div>
+
+        <article class="scenario-panel" data-scenario-panel>
+          <p class="scenario-kicker">Сценарій: квартира</p>
+          <h3>Пакування, перенесення, транспорт і збірка меблів за один день</h3>
+          <p>Команда маркує коробки по кімнатах, захищає меблі, перевозить речі та розставляє головне на новому місці.</p>
+          <ul>
+            <li>2-5 вантажників залежно від обсягу</li>
+            <li>Плівка, коробки, стрейч і кутники</li>
+            <li>Фотофіксація крихких предметів</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section calculator" id="calculator">
+      <div class="calculator-shell">
+        <div class="calculator-copy">
+          <p class="eyebrow">Живий кошторис</p>
+          <h2>Порахуйте орієнтовну вартість за 30 секунд</h2>
+          <p>Калькулятор враховує обсяг, поверх, ліфт, відстань, пакування й терміновість.</p>
+        </div>
+
+        <form class="move-calc" data-calculator>
+          <div class="field-grid">
+            <label>
+              Місто
+              <select name="city">
+                <option value="kyiv">Київ</option>
+                <option value="lviv">Львів</option>
+                <option value="dnipro">Дніпро</option>
+                <option value="odesa">Одеса</option>
+              </select>
+            </label>
+
+            <label>
+              Об'єкт
+              <select name="type">
+                <option value="apartment">Квартира</option>
+                <option value="office">Офіс</option>
+                <option value="commerce">Комерційний простір</option>
+              </select>
+            </label>
+
+            <label>
+              Кімнати або зони: <strong data-rooms-label>2</strong>
+              <input type="range" name="rooms" min="1" max="6" value="2">
+            </label>
+
+            <label>
+              Відстань: <strong data-distance-label>12 км</strong>
+              <input type="range" name="distance" min="3" max="80" value="12">
+            </label>
+
+            <label>
+              Поверх
+              <input type="number" name="floor" min="1" max="25" value="5">
+            </label>
+
+            <label>
+              Коробки
+              <input type="number" name="boxes" min="5" max="120" value="25">
+            </label>
+          </div>
+
+          <fieldset class="extras">
+            <legend>Додатково</legend>
+            <label class="switch-row">
+              <input type="checkbox" name="elevator" checked>
+              <span>Є вантажний або великий ліфт</span>
+            </label>
+            <label class="switch-row">
+              <input type="checkbox" name="packing" checked>
+              <span>Потрібне пакування командою</span>
+            </label>
+            <label class="switch-row">
+              <input type="checkbox" name="assembly">
+              <span>Розбір і збір меблів</span>
+            </label>
+            <label class="switch-row">
+              <input type="checkbox" name="urgent">
+              <span>Переїзд протягом 24 годин</span>
+            </label>
+          </fieldset>
+
+          <div class="calc-output">
+            <div>
+              <span>Орієнтовно</span>
+              <strong data-total>6 800 грн</strong>
+              <p data-team>Команда: 3 людини, 1 авто, 5-6 годин</p>
+            </div>
+            <a class="button button-dark" href="#contact">Забронювати слот</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">Конструктор</p>
+          <h2>Зберіть пакет під свій переїзд</h2>
+        </div>
+        <p>Кожна опція змінює підсумок пакета. Це робить сайт відчутно інтерактивнішим за звичайний лендінг.</p>
+      </div>
+
+      <div class="service-builder">
+        <div class="service-options" data-services>
+          <button class="service-option is-selected" type="button" data-service="Пакування" data-price="1800">
+            <span>01</span>
+            <strong>Пакування</strong>
+            <small>Коробки, плівка, маркування</small>
+          </button>
+          <button class="service-option is-selected" type="button" data-service="Вантажники" data-price="2400">
+            <span>02</span>
+            <strong>Вантажники</strong>
+            <small>Команда під обсяг речей</small>
+          </button>
+          <button class="service-option is-selected" type="button" data-service="Транспорт" data-price="2200">
+            <span>03</span>
+            <strong>Транспорт</strong>
+            <small>Фургон або кілька авто</small>
+          </button>
+          <button class="service-option" type="button" data-service="Збір меблів" data-price="1300">
+            <span>04</span>
+            <strong>Збір меблів</strong>
+            <small>Шафи, столи, стелажі</small>
+          </button>
+          <button class="service-option" type="button" data-service="Склад" data-price="1600">
+            <span>05</span>
+            <strong>Тимчасовий склад</strong>
+            <small>Зберігання на 7 днів</small>
+          </button>
+          <button class="service-option" type="button" data-service="Координатор" data-price="900">
+            <span>06</span>
+            <strong>Координатор</strong>
+            <small>Контроль часу і чек-листа</small>
+          </button>
+        </div>
+
+        <aside class="package-summary">
+          <p class="eyebrow">Пакет</p>
+          <h3 data-package-name>Move Plus</h3>
+          <ul data-package-list></ul>
+          <div class="summary-total">
+            <span>Стартова вартість</span>
+            <strong data-package-total>6 400 грн</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="section-heading">
+        <p class="eyebrow">Процес</p>
+        <h2>Переїзд розкладений на контрольовані етапи</h2>
+      </div>
+      <div class="process-grid">
+        <article>
+          <span>1</span>
+          <h3>Бриф</h3>
+          <p>Уточнюємо адреси, обсяг, ліфт, техніку, меблі та бажаний слот.</p>
+        </article>
+        <article>
+          <span>2</span>
+          <h3>План</h3>
+          <p>Формуємо команду, транспорт, матеріали й підтверджуємо кошторис.</p>
+        </article>
+        <article>
+          <span>3</span>
+          <h3>Пакування</h3>
+          <p>Речі сортуються, захищаються, маркуються і потрапляють у чек-лист.</p>
+        </article>
+        <article>
+          <span>4</span>
+          <h3>Переїзд</h3>
+          <p>Координатор веде команду, а клієнт бачить прогрес і фінальний статус.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section cases" id="cases">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">Кейси</p>
+          <h2>Ситуації, де сервіс продає себе</h2>
+        </div>
+        <p>Такі блоки допомагають показати, що лендінг не абстрактний, а під реальні задачі клієнтів.</p>
+      </div>
+      <div class="case-grid">
+        <article>
+          <span>Київ</span>
+          <h3>3-кімнатна квартира</h3>
+          <p>65 коробок, техніка, дитяча кімната, розбір шафи. Завершили за 7 годин.</p>
+        </article>
+        <article>
+          <span>Львів</span>
+          <h3>Офіс на 18 людей</h3>
+          <p>Робочі місця, серверна шафа, архів документів. Переїзд у вихідний.</p>
+        </article>
+        <article>
+          <span>Дніпро</span>
+          <h3>Шоурум одягу</h3>
+          <p>Стійки, дзеркала, товар, манекени та пакування вітрин без пошкоджень.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ</p>
+        <h2>Питання, які знімають сумніви перед заявкою</h2>
+      </div>
+      <div class="faq-list" data-faq>
+        <article class="faq-item is-open">
+          <button type="button">Чи можна отримати точну ціну до переїзду?</button>
+          <p>Так. Після короткого брифу менеджер уточнює обсяг і фіксує кошторис перед стартом робіт.</p>
+        </article>
+        <article class="faq-item">
+          <button type="button">Ви пакуєте крихкі речі?</button>
+          <p>Так. Для скла, техніки, дзеркал і декору використовуються окремі матеріали та маркування.</p>
+        </article>
+        <article class="faq-item">
+          <button type="button">Чи працюєте у вихідні?</button>
+          <p>Так, для офісів і бізнесів часто плануємо переїзд на вечір або вихідний день.</p>
+        </article>
+        <article class="faq-item">
+          <button type="button">Що, якщо треба зберегти речі на кілька днів?</button>
+          <p>Можна додати тимчасовий склад у пакет і забрати речі у погоджений день.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-panel">
+        <div>
+          <p class="eyebrow">Заявка</p>
+          <h2>Забронюйте слот для переїзду</h2>
+          <p>Форма демонстраційна, але поводиться як реальний lead-блок: перевіряє поля й показує статус.</p>
+        </div>
+
+        <form class="lead-form" data-lead-form>
+          <label>
+            Ім'я
+            <input type="text" name="name" placeholder="Костя" required>
+          </label>
+          <label>
+            Телефон
+            <input type="tel" name="phone" placeholder="+380 XX XXX XX XX" required>
+          </label>
+          <label>
+            Тип переїзду
+            <select name="moveType">
+              <option>Квартира</option>
+              <option>Офіс</option>
+              <option>Бізнес</option>
+            </select>
+          </label>
+          <button class="button button-primary" type="submit">Отримати план переїзду</button>
+          <p class="form-status" data-form-status aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>MoveMate - демо-лендінг для портфоліо HTML/CSS/JS.</p>
+    <a href="#top">Нагору</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
