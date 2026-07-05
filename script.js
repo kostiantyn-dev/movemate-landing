@@ -4,6 +4,7 @@ const calculator = document.querySelector("[data-calculator]");
 const services = document.querySelector("[data-services]");
 const faq = document.querySelector("[data-faq]");
 const leadForm = document.querySelector("[data-lead-form]");
+const revealItems = document.querySelectorAll(".section, .quote-card, .hero-metrics");
 
 const money = (value) => `${Math.round(value).toLocaleString("uk-UA")} грн`;
 
@@ -15,6 +16,24 @@ if (navToggle && nav) {
   nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => nav.classList.remove("is-open"));
   });
+}
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      entry.target.classList.add("is-visible");
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.14 });
+
+  revealItems.forEach((item) => {
+    item.classList.add("reveal");
+    revealObserver.observe(item);
+  });
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
 const scenarioData = {
